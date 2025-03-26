@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Invisible Chains - Handmade Jewellery</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Invisible Chains Collection</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="shop.html">Shop</a></li>
+                <li><a href="cart.html">Cart (<span id="cart-count">0</span>)</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+        <!-- Sidebar for Categories -->
+        <aside class="sidebar">
+            <h2>Categories</h2>
+            <ul>
+                <li><a href="bangles.html">Bangles</a></li>
+                <li><a href="earrings.html">Earrings</a></li>
+                <li><a href="necklaces.html">Necklaces</a></li>
+                <li><a href="materials.html">Materials</a></li>
+                <li><a href="invisible-chains.html">Invisible Chains</a></li>
+                <li><a href="hair-accessories.html">Hair Accessories</a></li>
+                <li><a href="bracelets.html">Bracelets</a></li>
+                <li><a href="finger-rings.html">Finger Rings</a></li>
+            </ul>
+        </aside>
+
+        <!-- Product Section -->
+        <section id="products">
+            <div class="product">
+                <img src="images/invisible-chain1.jpg" alt="Invisible Chain 1">
+                <h3>Elegant Invisible Chain</h3>
+                <p>Price: ₹120</p>
+                <button onclick="addToCart('Elegant Invisible Chain', 120)">Add to Cart</button>
+            </div>
+            <div class="product">
+                <img src="images/invisible-chain2.jpg" alt="Invisible Chain 2">
+                <h3>Crystal Invisible Chain</h3>
+                <p>Price: ₹150</p>
+                <button onclick="addToCart('Crystal Invisible Chain', 150)">Add to Cart</button>
+            </div>
+            <div class="product">
+                <img src="images/invisible-chain3.jpg" alt="Invisible Chain 3">
+                <h3>Gold Finish Invisible Chain</h3>
+                <p>Price: ₹180</p>
+                <button onclick="addToCart('Gold Finish Invisible Chain', 180)">Add to Cart</button>
+            </div>
+        </section>
+    </div>
+
+    <script src="cart.js"></script>
+    <footer>
+        <p>&copy; 2025 Handmade Jewellery. All rights reserved.</p>
+    </footer>
+</body>
+</html>
