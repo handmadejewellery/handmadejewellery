@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop - Handmade Jewellery</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Shop Our Collection</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="shop.html">Shop</a></li>
+                <li><a href="cart.html">Cart (<span id="cart-count">0</span>)</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="https://www.instagram.com/handmadejewellery_05?igsh=OWRhcmFodjdzdHEw" target="_blank">Instagram</a></li>
+                <li><a href="https://www.youtube.com/@gurudeepthi6893" target="_blank">YouTube</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+        <!-- Sidebar for Categories -->
+        <aside class="sidebar">
+            <h2>Categories</h2>
+            <ul>
+                <li><a href="bangles.html">Bangles</a></li>
+                <li><a href="earrings.html">Earrings</a></li>
+                <li><a href="necklaces.html">Necklaces</a></li>
+                <li><a href="materials.html">Materials</a></li>
+                <li><a href="finger-rings.html">Finger Rings</a></li>
+                <li><a href="hair-accessories.html">Hair Accessories</a></li>
+                <li><a href="bracelets.html">Bracelets</a></li>
+                <li><a href="invisible-chains.html">Invisible Chains</a></li>
+            </ul>
+        </aside>
+
+        <!-- Product Section -->
+        <section id="products">
+            <div class="product">
+                <img src="images/bangle.jpg" alt="Thread Bangles">
+                <h3>Handmade Thread Bangles</h3>
+                <p>Price: ₹70</p>
+                <button onclick="addToCart('Handmade Thread Bangles', 70)">Add to Cart</button>
+            </div>
+            <div class="product">
+                <img src="images/earring.jpg" alt="Earrings">
+                <h3>Handmade Earrings</h3>
+                <p>Price: ₹50</p>
+                <button onclick="addToCart('Handmade Earrings', 50)">Add to Cart</button>
+            </div>
+            <div class="product">
+                <img src="images/necklace.jpg" alt="Necklace">
+                <h3>Handmade Necklace</h3>
+                <p>Price: ₹150</p>
+                <button onclick="addToCart('Handmade Necklace', 150)">Add to Cart</button>
+            </div>
+            <div class="product">
+                <img src="images/materials.jpg" alt="Jewellery Materials">
+                <h3>Jewellery Making Materials</h3>
+                <p>Price: ₹200</p>
+                <button onclick="addToCart('Jewellery Making Materials', 200)">Add to Cart</button>
+            </div>
+        </section>
+    </div>
+
+    <script src="cart.js"></script>
+    <footer>
+        <p>&copy; 2025 Handmade Jewellery. All rights reserved.</p>
+    </footer>
+</body>
+</html>

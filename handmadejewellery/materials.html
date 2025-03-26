@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jewellery Materials - Handmade Jewellery</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Jewellery Making Materials</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="shop.html">Shop</a></li>
+                <li><a href="cart.html">Cart (<span id="cart-count">0</span>)</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+        <!-- Sidebar for Categories -->
+        <aside class="sidebar">
+            <h2>Categories</h2>
+            <ul>
+                <li><a href="bangles.html">Bangles</a></li>
+                <li><a href="earrings.html">Earrings</a></li>
+                <li><a href="necklaces.html">Necklaces</a></li>
+                <li><a href="materials.html" class="active">Materials</a></li>
+                <li><a href="giftsets.html">Gift Sets</a></li>
+            </ul>
+        </aside>
+
+        <!-- Product Section -->
+        <section id="products">
+            <div class="product">
+                <img src="images/beads.jpg" alt="Jewellery Beads">
+                <h3>Jewellery Beads</h3>
+                <p>Price: ₹120</p>
+                <button onclick="addToCart('Jewellery Beads', 120)">Add to Cart</button>
+            </div>
+            <div class="product">
+                <img src="images/hooks.jpg" alt="Earring Hooks">
+                <h3>Earring Hooks</h3>
+                <p>Price: ₹50</p>
+                <button onclick="addToCart('Earring Hooks', 50)">Add to Cart</button>
+            </div>
+            <div class="product">
+                <img src="images/threads.jpg" alt="Silk Threads">
+                <h3>Silk Threads</h3>
+                <p>Price: ₹80</p>
+                <button onclick="addToCart('Silk Threads', 80)">Add to Cart</button>
+            </div>
+            <div class="product">
+                <img src="images/clasps.jpg" alt="Necklace Clasps">
+                <h3>Necklace Clasps</h3>
+                <p>Price: ₹90</p>
+                <button onclick="addToCart('Necklace Clasps', 90)">Add to Cart</button>
+            </div>
+        </section>
+    </div>
+
+    <script src="cart.js"></script>
+    <footer>
+        <p>&copy; 2025 Handmade Jewellery. All rights reserved.</p>
+    </footer>
+</body>
+</html>

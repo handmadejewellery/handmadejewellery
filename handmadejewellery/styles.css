@@ -1,0 +1,174 @@
+/* General Styling */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    background-color: #f9f6f2;
+}
+
+/* Header */
+header {
+    background-color: #d4af37;
+    padding: 15px;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+}
+
+.logo {
+    width: 80px;  /* Adjust size as needed */
+    height: auto;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 10px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+/* Main container for shop page */
+.container {
+    display: flex;
+    align-items: flex-start;
+    padding: 20px;
+}
+
+/* Sidebar styling */
+.sidebar {
+    width: 220px;
+    background-color: #f4f4f4;
+    padding: 15px;
+    border-radius: 8px;
+    text-align: left;
+}
+
+.sidebar h2 {
+    font-size: 18px;
+    text-align: center;
+    color: #333;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    padding: 12px;
+    border-bottom: 1px solid #ddd;
+    text-align: left;
+}
+
+.sidebar ul li a {
+    text-decoration: none;
+    color: #000;
+    font-weight: bold;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidebar ul li a:hover {
+    background-color: #d4af37;
+    color: white;
+    padding-left: 10px;
+}
+
+/* Active Page Highlight */
+.sidebar ul li a.active {
+    background-color: #b8962e;
+    color: white;
+    padding-left: 10px;
+    border-radius: 4px;
+}
+
+/* Product section */
+#products {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    flex-grow: 1;
+}
+
+/* Product Cards */
+.product {
+    background: white;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    width: 200px;
+    text-align: center;
+}
+
+/* Product Image */
+.product img {
+    width: 120px;
+    height: auto;
+    border-radius: 5px;
+}
+
+/* Buttons */
+button {
+    background-color: #d4af37;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    margin-top: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #b8962e;
+}
+
+/* Cart Page Styling */
+#cart-items {
+    text-align: center;
+    padding: 20px;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+ul li {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+#cart-total {
+    font-weight: bold;
+    font-size: 18px;
+}
+
+/* Checkout Page */
+#checkout {
+    padding: 50px;
+}
+
+/* Footer */
+footer {
+    background-color: #222;
+    color: white;
+    padding: 10px;
+    margin-top: 20px;
+}

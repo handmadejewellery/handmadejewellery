@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Necklaces - Handmade Jewellery</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Necklaces Collection</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="shop.html">Shop</a></li>
+                <li><a href="cart.html">Cart (<span id="cart-count">0</span>)</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+        <!-- Sidebar for Categories -->
+        <aside class="sidebar">
+            <h2>Categories</h2>
+            <ul>
+                <li><a href="bangles.html">Bangles</a></li>
+                <li><a href="earrings.html">Earrings</a></li>
+                <li><a href="necklaces.html" class="active">Necklaces</a></li>
+                <li><a href="materials.html">Materials</a></li>
+                <li><a href="giftsets.html">Gift Sets</a></li>
+            </ul>
+        </aside>
+
+        <!-- Product Section -->
+        <section id="products">
+            <div class="product">
+                <img src="images/necklace1.jpg" alt="Handmade Pearl Necklace">
+                <h3>Handmade Pearl Necklace</h3>
+                <p>Price: ₹250</p>
+                <button onclick="addToCart('Handmade Pearl Necklace', 250)">Add to Cart</button>
+            </div>
+            <div class="product">
+                <img src="images/necklace2.jpg" alt="Beaded Layered Necklace">
+                <h3>Beaded Layered Necklace</h3>
+                <p>Price: ₹180</p>
+                <button onclick="addToCart('Beaded Layered Necklace', 180)">Add to Cart</button>
+            </div>
+            <div class="product">
+                <img src="images/necklace3.jpg" alt="Gold Plated Necklace">
+                <h3>Gold Plated Necklace</h3>
+                <p>Price: ₹350</p>
+                <button onclick="addToCart('Gold Plated Necklace', 350)">Add to Cart</button>
+            </div>
+            <div class="product">
+                <img src="images/necklace4.jpg" alt="Handcrafted Thread Necklace">
+                <h3>Handcrafted Thread Necklace</h3>
+                <p>Price: ₹220</p>
+                <button onclick="addToCart('Handcrafted Thread Necklace', 220)">Add to Cart</button>
+            </div>
+        </section>
+    </div>
+
+    <script src="cart.js"></script>
+    <footer>
+        <p>&copy; 2025 Handmade Jewellery. All rights reserved.</p>
+    </footer>
+</body>
+</html>
