@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bangles - Handmade Jewellery</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Bangles Collection</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="shop.html">Shop</a></li>
+                <li><a href="cart.html">Cart (<span id="cart-count">0</span>)</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+        <!-- Sidebar for Categories -->
+        <aside class="sidebar">
+            <h2>Categories</h2>
+            <ul>
+                <li><a href="bangles.html">Bangles</a></li>
+                <li><a href="earrings.html">Earrings</a></li>
+                <li><a href="necklaces.html">Necklaces</a></li>
+                <li><a href="materials.html">Materials</a></li>
+                <li><a href="giftsets.html">Gift Sets</a></li>
+            </ul>
+        </aside>
+
+        <!-- Product Section -->
+        <section id="products"></section>
+    </div>
+
+    <script>
+        const bangles = [
+            { name: "Bangle-D01", price: 40, image: "bangles1.jpg" },
+            { name: "Bangle-D02", price: 35, image: "bangles2.jpg" },
+            { name: "Bangle-D03", price: 70, image: "bangles3.jpg" },
+            { name: "Bangle-D04", price: 30, image: "bangles4.jpg" },
+            { name: "Bangle-D05", price: 50, image: "bangles5.jpg" },
+            { name: "Bangle-D06", price: 80, image: "bangles6.jpg" },
+            { name: "Bangle-D07", price: 130, image: "bangles7.jpg" },
+            { name: "Bangle-D08", price: 50, image: "bangles8.jpg" },
+            { name: "Bangle-D09", price: 80, image: "bangles9.jpg" },
+            { name: "Bangle-D10", price: 100, image: "bangles10.jpg" }
+        ];
+
+        function generateProducts() {
+            let productContainer = document.getElementById("products");
+            productContainer.innerHTML = "";
+
+            bangles.forEach((bangle) => {
+                let productHTML = `
+                    <div class="product">
+                        <img src="${bangle.image}" alt="${bangle.name}">
+                        <h3>${bangle.name}</h3>
+                        <p>Price: ₹${bangle.price}</p>
+                        <button onclick="addToCart('${bangle.name}', ${bangle.price})">Add to Cart</button>
+                    </div>
+                `;
+                productContainer.innerHTML += productHTML;
+            });
+        }
+
+        generateProducts();
+    </script>
+
+    <script src="cart.js"></script>
+    <footer>
+        <p>&copy; 2025 Handmade Jewellery. All rights reserved.</p>
+    </footer>
+</body>
+</html>

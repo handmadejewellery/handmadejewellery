@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Finger Rings - Handmade Jewellery</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Finger Rings Collection</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="shop.html">Shop</a></li>
+                <li><a href="cart.html">Cart (<span id="cart-count">0</span>)</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+        <!-- Sidebar for Categories -->
+        <aside class="sidebar">
+            <h2>Categories</h2>
+            <ul>
+                <li><a href="bangles.html">Bangles</a></li>
+                <li><a href="earrings.html">Earrings</a></li>
+                <li><a href="necklaces.html">Necklaces</a></li>
+                <li><a href="materials.html">Materials</a></li>
+                <li><a href="finger-rings.html" class="active">Finger Rings</a></li>
+                <li><a href="hair-accessories.html">Hair Accessories</a></li>
+                <li><a href="bracelets.html">Bracelets</a></li>
+                <li><a href="invisible-chains.html">Invisible Chains</a></li>
+            </ul>
+        </aside>
+
+        <!-- Product Section -->
+        <section id="products">
+            <div class="product">
+                <img src="images/ring1.jpg" alt="Elegant Gold Ring">
+                <h3>Elegant Gold Ring</h3>
+                <p>Price: ₹500</p>
+                <button onclick="addToCart('Elegant Gold Ring', 500)">Add to Cart</button>
+            </div>
+            <div class="product">
+                <img src="images/ring2.jpg" alt="Silver Crystal Ring">
+                <h3>Silver Crystal Ring</h3>
+                <p>Price: ₹450</p>
+                <button onclick="addToCart('Silver Crystal Ring', 450)">Add to Cart</button>
+            </div>
+            <div class="product">
+                <img src="images/ring3.jpg" alt="Adjustable Pearl Ring">
+                <h3>Adjustable Pearl Ring</h3>
+                <p>Price: ₹400</p>
+                <button onclick="addToCart('Adjustable Pearl Ring', 400)">Add to Cart</button>
+            </div>
+            <div class="product">
+                <img src="images/ring4.jpg" alt="Rose Gold Heart Ring">
+                <h3>Rose Gold Heart Ring</h3>
+                <p>Price: ₹550</p>
+                <button onclick="addToCart('Rose Gold Heart Ring', 550)">Add to Cart</button>
+            </div>
+        </section>
+    </div>
+
+    <script src="cart.js"></script>
+    <footer>
+        <p>&copy; 2025 Handmade Jewellery. All rights reserved.</p>
+    </footer>
+</body>
+</html>
