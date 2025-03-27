@@ -28,38 +28,54 @@
                 <li><a href="earrings.html" class="active">Earrings</a></li>
                 <li><a href="necklaces.html">Necklaces</a></li>
                 <li><a href="materials.html">Materials</a></li>
-                <li><a href="giftsets.html">Gift Sets</a></li>
+                <li><a href="finger-rings.html">Finger-Rings</a></li>
+                <li><a href="hair-accessories.html">Hair Accessories</a></li>
+                <li><a href="bracelets.html">Bracelets</a></li>
+                <li><a href="invisible-chains.html">Invisible Chains</a></li>
             </ul>
         </aside>
 
         <!-- Product Section -->
-        <section id="products">
-            <div class="product">
-                <img src="images/earring1.jpg" alt="Elegant Hoop Earrings">
-                <h3>Elegant Hoop Earrings</h3>
-                <p>Price: ₹80</p>
-                <button onclick="addToCart('Elegant Hoop Earrings', 80)">Add to Cart</button>
-            </div>
-            <div class="product">
-                <img src="images/earring2.jpg" alt="Gold Plated Jhumkas">
-                <h3>Gold Plated Jhumkas</h3>
-                <p>Price: ₹150</p>
-                <button onclick="addToCart('Gold Plated Jhumkas', 150)">Add to Cart</button>
-            </div>
-            <div class="product">
-                <img src="images/earring3.jpg" alt="Stud Earrings">
-                <h3>Stud Earrings</h3>
-                <p>Price: ₹60</p>
-                <button onclick="addToCart('Stud Earrings', 60)">Add to Cart</button>
-            </div>
-            <div class="product">
-                <img src="images/earring4.jpg" alt="Handmade Dangle Earrings">
-                <h3>Handmade Dangle Earrings</h3>
-                <p>Price: ₹120</p>
-                <button onclick="addToCart('Handmade Dangle Earrings', 120)">Add to Cart</button>
-            </div>
-        </section>
+        <section id="products"></section>
     </div>
+
+    <script>
+        // Earrings Data Array
+        const earrings = [
+            { name: "Earrings-E01", price: 25, image: "E01.jpg" },
+            { name: "Earrings-E02", price: 40, image: "E02.jpg" },
+            { name: "Earrings-E03", price: 50, image: "E03.jpg" },
+            { name: "Earrings-E04", price: 20, image: "E04.jpg" },
+            { name: "Earrings-E05", price: 15, image: "E05.jpg" },
+            { name: "Earrings-E06", price: 30, image: "E06.jpg" },
+            { name: "Earrings-E07", price: 50, image: "E07.jpg" },
+            { name: "Earrings-E08", price: 55, image: "E08.jpg" },
+            { name: "Earrings-E09", price: 25, image: "E09.jpg" },
+            { name: "Earrings-E10", price: 50, image: "E10.jpg" },
+            { name: "Earrings-E11", price: 80, image: "E11.jpg" }
+        ];
+
+        // Function to Generate Product List
+        function generateProducts() {
+            let productContainer = document.getElementById("products");
+            productContainer.innerHTML = "";
+
+            earrings.forEach((earring) => {
+                let productHTML = `
+                    <div class="product">
+                        <img src="${earring.image}" alt="${earring.name}">
+                        <h3>${earring.name}</h3>
+                        <p>Price: ₹${earring.price}</p>
+                        <button onclick="addToCart('${earring.name}', ${earring.price})">Add to Cart</button>
+                    </div>
+                `;
+                productContainer.innerHTML += productHTML;
+            });
+        }
+
+        // Call Function to Load Products
+        generateProducts();
+    </script>
 
     <script src="cart.js"></script>
     <footer>
