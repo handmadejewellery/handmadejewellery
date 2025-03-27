@@ -36,33 +36,39 @@
         </aside>
 
         <!-- Product Section -->
-        <section id="products">
-            <div class="product">
-                <img src="images/necklace1.jpg" alt="Handmade Pearl Necklace">
-                <h3>Handmade Pearl Necklace</h3>
-                <p>Price: ₹250</p>
-                <button onclick="addToCart('Handmade Pearl Necklace', 250)">Add to Cart</button>
-            </div>
-            <div class="product">
-                <img src="images/necklace2.jpg" alt="Beaded Layered Necklace">
-                <h3>Beaded Layered Necklace</h3>
-                <p>Price: ₹180</p>
-                <button onclick="addToCart('Beaded Layered Necklace', 180)">Add to Cart</button>
-            </div>
-            <div class="product">
-                <img src="images/necklace3.jpg" alt="Gold Plated Necklace">
-                <h3>Gold Plated Necklace</h3>
-                <p>Price: ₹350</p>
-                <button onclick="addToCart('Gold Plated Necklace', 350)">Add to Cart</button>
-            </div>
-            <div class="product">
-                <img src="images/necklace4.jpg" alt="Handcrafted Thread Necklace">
-                <h3>Handcrafted Thread Necklace</h3>
-                <p>Price: ₹220</p>
-                <button onclick="addToCart('Handcrafted Thread Necklace', 220)">Add to Cart</button>
-            </div>
-        </section>
+        <section id="products"></section>
     </div>
+
+    <script>
+        // Array of Necklace Products
+        const necklaces = [
+            { name: "Necklace-N01", price: 60, image: "N01.jpg" },
+            { name: "Necklace-N02", price: 80, image: "N02.jpg" },
+            { name: "Necklace-N03", price: 80, image: "N03.jpg" },
+            { name: "Necklace-N04", price: 60, image: "N04.jpg" },
+            { name: "Necklace-N05", price: 90, image: "N05.jpg" },
+            { name: "Necklace-N06", price: 30, image: "N06.jpg" }
+        ];
+
+        function generateProducts() {
+            let productContainer = document.getElementById("products");
+            productContainer.innerHTML = "";
+
+            necklaces.forEach((necklace) => {
+                let productHTML = `
+                    <div class="product">
+                        <img src="${necklace.image}" alt="${necklace.name}">
+                        <h3>${necklace.name}</h3>
+                        <p>Price: ₹${necklace.price}</p>
+                        <button onclick="addToCart('${necklace.name}', ${necklace.price})">Add to Cart</button>
+                    </div>
+                `;
+                productContainer.innerHTML += productHTML;
+            });
+        }
+
+        generateProducts();
+    </script>
 
     <script src="cart.js"></script>
     <footer>
