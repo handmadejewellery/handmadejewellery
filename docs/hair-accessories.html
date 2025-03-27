@@ -15,12 +15,13 @@
                 <li><a href="shop.html">Shop</a></li>
                 <li><a href="cart.html">Cart (<span id="cart-count">0</span>)</a></li>
                 <li><a href="contact.html">Contact</a></li>
+                <li><a href="https://www.instagram.com/handmadejewellery_05?igsh=OWRhcmFodjdzdHEw" target="_blank">Instagram</a></li>
+                <li><a href="https://www.youtube.com/@gurudeepthi6893" target="_blank">YouTube</a></li>
             </ul>
         </nav>
     </header>
 
     <div class="container">
-        <!-- Sidebar for Categories -->
         <aside class="sidebar">
             <h2>Categories</h2>
             <ul>
@@ -36,35 +37,53 @@
         </aside>
 
         <!-- Product Section -->
-        <section id="products">
-            <div class="product">
-                <img src="images/hairclip1.jpg" alt="Floral Hair Clip">
-                <h3>Floral Hair Clip</h3>
-                <p>Price: ₹150</p>
-                <button onclick="addToCart('Floral Hair Clip', 150)">Add to Cart</button>
-            </div>
-            <div class="product">
-                <img src="images/hairband1.jpg" alt="Beaded Hairband">
-                <h3>Beaded Hairband</h3>
-                <p>Price: ₹180</p>
-                <button onclick="addToCart('Beaded Hairband', 180)">Add to Cart</button>
-            </div>
-            <div class="product">
-                <img src="images/hairpin1.jpg" alt="Pearl Hair Pin">
-                <h3>Pearl Hair Pin</h3>
-                <p>Price: ₹100</p>
-                <button onclick="addToCart('Pearl Hair Pin', 100)">Add to Cart</button>
-            </div>
-            <div class="product">
-                <img src="images/scrunchie1.jpg" alt="Velvet Scrunchie">
-                <h3>Velvet Scrunchie</h3>
-                <p>Price: ₹80</p>
-                <button onclick="addToCart('Velvet Scrunchie', 80)">Add to Cart</button>
-            </div>
-        </section>
+        <section id="products"></section>
     </div>
 
-    <script src="cart.js"></script>
+    <script>
+        // Array of products
+        const products = [
+            { name: "Hair-Accessories-H01", price: 20, image: "H01.jpg" },
+            { name: "Hair-Accessories-H02", price: 25, image: "H02.jpg" },
+            { name: "Hair-Accessories-H03", price: 20, image: "H03.jpg" },
+            { name: "Hair-Accessories-H04", price: 20, image: "H04.jpg" },
+            { name: "Hair-Accessories-H05", price: 30, image: "H05.jpg" },
+            { name: "Hair-Accessories-H06", price: 25, image: "H06.jpg" },
+            { name: "Hair-Accessories-H07", price: 25, image: "H07.jpg" },
+            { name: "Hair-Accessories-H08", price: 10, image: "H08.jpg" },
+            { name: "Hair-Accessories-H09", price: 12, image: "H09.jpg" },
+            { name: "Hair-Accessories-H10", price: 15, image: "H10.jpg" },
+            { name: "Hair-Accessories-H11", price: 25, image: "H11.jpg" },
+            { name: "Hair-Accessories-H12", price: 40, image: "H12.jpg" }
+        ];
+
+        // Function to display products dynamically
+        function displayProducts() {
+            const productsContainer = document.getElementById("products");
+            productsContainer.innerHTML = ""; // Clear previous content
+            
+            products.forEach(product => {
+                const productHTML = `
+                    <div class="product">
+                        <img src="${product.image}" alt="${product.name}">
+                        <h3>${product.name}</h3>
+                        <p>Price: ₹${product.price}</p>
+                        <button onclick="addToCart('${product.name}', ${product.price})">Add to Cart</button>
+                    </div>
+                `;
+                productsContainer.innerHTML += productHTML;
+            });
+        }
+
+        // Call function to load products
+        displayProducts();
+
+        // Function to add item to cart (placeholder)
+        function addToCart(name, price) {
+            alert(`${name} added to cart!`);
+        }
+    </script>
+
     <footer>
         <p>&copy; 2025 Handmade Jewellery. All rights reserved.</p>
     </footer>
