@@ -5,6 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jewellery Materials - Handmade Jewellery</title>
     <link rel="stylesheet" href="styles.css">
+    <script>
+        function toggleMaterialLabels() {
+            var labels = document.getElementById("material-labels");
+            if (labels.style.display === "none" || labels.style.display === "") {
+                labels.style.display = "block";
+            } else {
+                labels.style.display = "none";
+            }
+        }
+    </script>
 </head>
 <body>
     <header>
@@ -29,7 +39,17 @@
                 <li><a href="bangles.html">Bangles</a></li>
                 <li><a href="earrings.html">Earrings</a></li>
                 <li><a href="necklaces.html">Necklaces</a></li>
-                <li><a href="materials.html" class="active">Materials</a></li>
+                <li><a href="#" class="active" onclick="toggleMaterialLabels()">Materials</a></li>
+                <ul id="material-labels" style="display: none;">
+                    <li><a href="kundans.html">Kundans</a></li>
+                    <li><a href="chains.html">Chains</a></li>
+                    <li><a href="glue-stick-pen.html">Glue & Stick Pen</a></li>
+                    <li><a href="bracelet-making.html">Bracelet Making</a></li>
+                    <li><a href="jewellery-making.html">Jewellery Making</a></li>
+                    <li><a href="pendants.html">Pendants</a></li>
+                    <li><a href="earrings-making.html">Earrings Making</a></li>
+                    <li><a href="hair-accessories-making.html">Hair Accessories Making</a></li>
+                </ul>
                 <li><a href="finger-rings.html">Finger-Rings</a></li>
                 <li><a href="hair-accessories.html">Hair Accessories</a></li>
                 <li><a href="bracelets.html">Bracelets</a></li>

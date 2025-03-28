@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Glue & Stick Pen - Handmade Jewellery</title>
+    <link rel="stylesheet" href="styles.css">
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const products = [
+                { name: "Jewellery Glue", price: 100, image: "images/jewellery-glue.jpg", description: "Strong adhesive glue for securing beads, stones, and other jewellery elements." },
+                { name: "Stick Pen", price: 80, image: "images/stick-pen.jpg", description: "Precision stick pen for applying glue neatly on intricate jewellery designs." },
+                { name: "Glue Gun", price: 250, image: "images/glue-gun.jpg", description: "High-temperature glue gun for quick and durable jewellery fixing." },
+                { name: "Quick Dry Adhesive", price: 120, image: "images/quick-dry-adhesive.jpg", description: "Fast-drying adhesive perfect for jewellery making and crafts." }
+            ];
+
+            const productContainer = document.getElementById("products");
+            productContainer.innerHTML = products.map(product => `
+                <div class="product">
+                    <img src="${product.image}" alt="${product.name}">
+                    <h3>${product.name}</h3>
+                    <p>${product.description}</p>
+                    <p>Price: ₹${product.price}</p>
+                    <button onclick="addToCart('${product.name}', ${product.price})">Add to Cart</button>
+                </div>
+            `).join('');
+        });
+    </script>
+</head>
+<body>
+    <header>
+        <h1>Glue & Stick Pen Collection</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="shop.html">Shop</a></li>
+                <li><a href="cart.html">Cart (<span id="cart-count">0</span>)</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="materials.html">Materials</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+        <section id="products">
+            <!-- Products will be dynamically inserted here -->
+        </section>
+    </div>
+
+    <script src="cart.js"></script>
+    <footer>
+        <p>&copy; 2025 Handmade Jewellery. All rights reserved.</p>
+    </footer>
+</body>
+</html>
