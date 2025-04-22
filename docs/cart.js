@@ -63,16 +63,23 @@ function checkout() {
     }
 
     // Construct order details message
-    let orderDetails = cart.map(item => `${item.name} - ₹${item.price}`).join("\n");
+    let orderDetails = cart.map(item => `${item.name} - ₹${item.price}`).join('\n');
     let totalPrice = cart.reduce((sum, item) => sum + item.price, 0);
 
-    let message = encodeURIComponent(`Hello, I want to place an order:\n\n${orderDetails}\n\nTotal: ₹${totalPrice}\nPlease confirm.`);
+    let message = `Hello, I want to place an order:\n\n${orderDetails}\n\nTotal: ₹${totalPrice}\nPlease confirm.`;
+    
+    // Properly encode the message for URL
+    let encodedMessage = encodeURIComponent(message);
 
-    // Replace 'YOUR_PHONE_NUMBER' with the actual WhatsApp number (include country code)
-    let whatsappNumber = "919492308024";  // Example: +91 for India, followed by the number
-    let whatsappURL = `https://wa.me/${whatsappNumber}?text=${message}`;
+    // Replace with your actual WhatsApp number (country code + number, no + or dashes)
+    let whatsappNumber = "919492308024";
+    let whatsappURL = `https://wa.me/${whatsappNumber}?text=${encodedMessage}`;
 
-    // Clear cart and redirect to WhatsApp
-    localStorage.removeItem("cart");
-    window.location.href = whatsappURL;
+    // Optional: Confirm before redirecting
+    if (confirm("You will be redirected to WhatsApp to complete your order.")) {
+        // Clear cart and redirect
+        localStorage.removeItem("cart");
+        window.location.href = whatsappURL;
+    }
 }
+
