@@ -69,7 +69,7 @@ function checkout() {
     let message = encodeURIComponent(`Hello, I want to place an order:\n\n${orderDetails}\n\nTotal: ₹${totalPrice}\nPlease confirm.`);
 
     // Replace 'YOUR_PHONE_NUMBER' with the actual WhatsApp number (include country code)
-    let whatsappNumber = "919640906507";  // Example: +91 for India, followed by the number
+    let whatsappNumber = "919492308024";  // Example: +91 for India, followed by the number
     let whatsappURL = `https://wa.me/${whatsappNumber}?text=${message}`;
 
     // Clear cart and redirect to WhatsApp
