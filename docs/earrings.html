@@ -62,7 +62,7 @@
             { name: "Earrings-E16", price: 50, image: "E16.jpg" },
             { name: "Earrings-E17", price: 50, image: "E17.jpg" },
             { name: "Earrings-E18", price: 30, image: "E18.jpg" },
-            { name: "Earrings-E19", price: 60, image: "E19.jpg",description: "3 IN 1 Earrings" }
+            { name: "Earrings-E19", price: 60, image: "E19.jpg", description: "3 IN 1 Earrings" }
         ];
 
         // Function to Generate Product List
@@ -71,11 +71,13 @@
             productContainer.innerHTML = "";
 
             earrings.forEach((earring) => {
+                let descriptionHTML = earring.description ? `<p>${earring.description}</p>` : "";
                 let productHTML = `
                     <div class="product">
                         <img src="${earring.image}" alt="${earring.name}">
                         <h3>${earring.name}</h3>
                         <p>Price: ₹${earring.price}</p>
+                        ${descriptionHTML}
                         <button onclick="addToCart('${earring.name}', ${earring.price})">Add to Cart</button>
                     </div>
                 `;
