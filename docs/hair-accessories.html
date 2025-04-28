@@ -41,34 +41,37 @@
     </div>
 
     <script>
-        // Array of products
+        // Array of products with description
         const products = [
-            { name: "Hair-Accessories-H01", price: 20, image: "H01.jpg" },
-            { name: "Hair-Accessories-H02", price: 25, image: "H02.jpg" },
-            { name: "Hair-Accessories-H03", price: 20, image: "H03.jpg" },
-            { name: "Hair-Accessories-H04", price: 20, image: "H04.jpg" },
-            { name: "Hair-Accessories-H05", price: 30, image: "H05.jpg" },
-            { name: "Hair-Accessories-H06", price: 25, image: "H06.jpg" },
-            { name: "Hair-Accessories-H07", price: 25, image: "H07.jpg" },
-            { name: "Hair-Accessories-H08", price: 10, image: "H08.jpg" },
-            { name: "Hair-Accessories-H09", price: 12, image: "H09.jpg" },
-            { name: "Hair-Accessories-H10", price: 15, image: "H10.jpg" },
-            { name: "Hair-Accessories-H11", price: 25, image: "H11.jpg" },
-            { name: "Hair-Accessories-H12", price: 40, image: "H12.jpg" },
-            { name: "Hair-Accessories-H13", price: 25, image: "H13.jpg" },
-            { name: "Hair-Accessories-H14", price: 60, image: "H14.jpg" }
+            { name: "Hair-Accessories-H01", price: 20, image: "H01.jpg", description: "alligator clips" },
+            { name: "Hair-Accessories-H02", price: 25, image: "H02.jpg", description: "alligator clips" },
+            { name: "Hair-Accessories-H03", price: 20, image: "H03.jpg", description: "alligator clips" },
+            { name: "Hair-Accessories-H04", price: 20, image: "H04.jpg", description: "alligator clips" },
+            { name: "Hair-Accessories-H05", price: 30, image: "H05.jpg", description: "alligator clips" },
+            { name: "Hair-Accessories-H06", price: 25, image: "H06.jpg", description: "alligator clips" },
+            { name: "Hair-Accessories-H07", price: 25, image: "H07.jpg", description: "alligator clips" },
+            { name: "Hair-Accessories-H08", price: 10, image: "H08.jpg", description: "hair band" },
+            { name: "Hair-Accessories-H09", price: 12, image: "H09.jpg", description: "alligator clip" },
+            { name: "Hair-Accessories-H10", price: 15, image: "H10.jpg", description: "alligator clip" },
+            { name: "Hair-Accessories-H11", price: 25, image: "H11.jpg", description: "hair band" },
+            { name: "Hair-Accessories-H12", price: 40, image: "H12.jpg", description: "hair band" },
+            { name: "Hair-Accessories-H13", price: 25, image: "H13.jpg", description: "tik tok clips" },
+            { name: "Hair-Accessories-H14", price: 60, image: "H14.jpg", description: "hair band" },
+            { name: "Hair-Accessories-H15", price: 60, image: "H15.jpg", description: "center clip 7cm" },
+            { name: "Hair-Accessories-H16", price: 70, image: "H16.jpg", description: "center clip 7cm" }
         ];
 
         // Function to display products dynamically
         function displayProducts() {
             const productsContainer = document.getElementById("products");
             productsContainer.innerHTML = ""; // Clear previous content
-            
+
             products.forEach(product => {
                 const productHTML = `
                     <div class="product">
                         <img src="${product.image}" alt="${product.name}">
                         <h3>${product.name}</h3>
+                        <p>${product.description}</p>
                         <p>Price: ₹${product.price}</p>
                         <button onclick="addToCart('${product.name}', ${product.price})">Add to Cart</button>
                     </div>
@@ -91,5 +94,3 @@
     </footer>
 </body>
 </html>
-
-
