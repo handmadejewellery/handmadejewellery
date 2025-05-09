@@ -30,7 +30,7 @@
                 <li><a href="earrings.html">Earrings</a></li>
                 <li><a href="necklaces.html" class="active">Necklaces</a></li>
                 <li><a href="materials.html">Materials</a></li>
-                <li><a href="finger-rings.html">Finger-Rings</a></li>
+                <li><a href="finger-rings.html">Finger Rings</a></li>
                 <li><a href="hair-accessories.html">Hair Accessories</a></li>
                 <li><a href="bracelets.html">Bracelets</a></li>
                 <li><a href="invisible-chains.html">Invisible Chains</a></li>
@@ -49,24 +49,31 @@
             { name: "Necklace-N03", price: 80, image: "N03.jpg" },
             { name: "Necklace-N04", price: 60, image: "N04.jpg" },
             { name: "Necklace-N05", price: 90, image: "N05.jpg" },
-            { name: "Necklace-N06", price: 30, image: "N06.jpg" }
+            { name: "Necklace-N06", price: 30, image: "N06.jpg" },
+            { name: "Necklace-N07", price: 140, image: "N07.jpg", description: "Adjustable necklace" }
         ];
 
         function generateProducts() {
-            let productContainer = document.getElementById("products");
+            const productContainer = document.getElementById("products");
             productContainer.innerHTML = "";
 
             necklaces.forEach((necklace) => {
-                let productHTML = `
+                const productHTML = `
                     <div class="product">
                         <img src="${necklace.image}" alt="${necklace.name}">
                         <h3>${necklace.name}</h3>
                         <p>Price: ₹${necklace.price}</p>
+                        ${necklace.description ? `<p>${necklace.description}</p>` : ""}
                         <button onclick="addToCart('${necklace.name}', ${necklace.price})">Add to Cart</button>
                     </div>
                 `;
                 productContainer.innerHTML += productHTML;
             });
+        }
+
+        function addToCart(name, price) {
+            alert(`${name} added to cart!`);
+            // Add your cart logic here
         }
 
         generateProducts();

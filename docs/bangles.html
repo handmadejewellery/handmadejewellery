@@ -26,7 +26,7 @@
         <aside class="sidebar">
             <h2>Categories</h2>
             <ul>
-                <li><a href="bangles.html">Bangles</a></li>
+                <li><a href="bangles.html" class="active">Bangles</a></li>
                 <li><a href="earrings.html">Earrings</a></li>
                 <li><a href="necklaces.html">Necklaces</a></li>
                 <li><a href="materials.html">Materials</a></li>
@@ -34,8 +34,6 @@
                 <li><a href="hair-accessories.html">Hair Accessories</a></li>
                 <li><a href="bracelets.html">Bracelets</a></li>
                 <li><a href="invisible-chains.html">Invisible Chains</a></li>
-
-
             </ul>
         </aside>
 
@@ -78,25 +76,30 @@
             { name: "Bangle-D31", price: 70, image: "bangles31.jpg" },
             { name: "Bangle-D32", price: 90, image: "bangles32.jpg" },
             { name: "Bangle-D33", price: 599, image: "bangles33.jpg" },
-            { name: "Bangle-D34", price: 100, image: "bangles34.jpg" }
-
-        ]; // Fixed missing commas
+            { name: "Bangle-D34", price: 100, image: "bangles34.jpg" },
+            { name: "Bangle-D35", price: 70, image: "bangles35.jpg", description: "Customization available & all colors available" }
+        ];
 
         function generateProducts() {
-            let productContainer = document.getElementById("products");
+            const productContainer = document.getElementById("products");
             productContainer.innerHTML = "";
 
             bangles.forEach((bangle) => {
-                let productHTML = `
+                const productHTML = `
                     <div class="product">
                         <img src="${bangle.image}" alt="${bangle.name}">
                         <h3>${bangle.name}</h3>
                         <p>Price: ₹${bangle.price}</p>
+                        ${bangle.description ? `<p>${bangle.description}</p>` : ""}
                         <button onclick="addToCart('${bangle.name}', ${bangle.price})">Add to Cart</button>
                     </div>
                 `;
                 productContainer.innerHTML += productHTML;
             });
+        }
+
+        function addToCart(name, price) {
+            alert(`${name} added to cart for ₹${price}`);
         }
 
         generateProducts();

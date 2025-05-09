@@ -22,6 +22,7 @@
     </header>
 
     <div class="container">
+        <!-- Sidebar for Categories -->
         <aside class="sidebar">
             <h2>Categories</h2>
             <ul>
@@ -29,7 +30,7 @@
                 <li><a href="earrings.html">Earrings</a></li>
                 <li><a href="necklaces.html">Necklaces</a></li>
                 <li><a href="materials.html">Materials</a></li>
-                <li><a href="invisible-chains.html">Invisible Chains</a></li>
+                <li><a href="invisible-chains.html" class="active">Invisible Chains</a></li>
                 <li><a href="hair-accessories.html">Hair Accessories</a></li>
                 <li><a href="bracelets.html">Bracelets</a></li>
                 <li><a href="finger-rings.html">Finger Rings</a></li>
@@ -49,7 +50,8 @@
             { img: "I05.jpg", name: "Invisible Chain-I05", price: 80 },
             { img: "I06.jpg", name: "Invisible Chain-I06", price: 120 },
             { img: "I07.jpg", name: "Invisible Chain-I07", price: 160 },
-            { img: "I08.jpg", name: "Invisible Chain-I08", price: 199 }
+            { img: "I08.jpg", name: "Invisible Chain-I08", price: 199 },
+            { img: "I09.jpg", name: "Invisible Chain-I09", price: 100, description: "Customization available: choose your preferred color and size" }
         ];
 
         const productsContainer = document.getElementById("products");
@@ -62,6 +64,7 @@
                 <img src="${product.img}" alt="${product.name}">
                 <h3>${product.name}</h3>
                 <p>Price: ₹${product.price}</p>
+                ${product.description ? `<p>${product.description}</p>` : ""}
                 <button onclick="addToCart('${product.name}', ${product.price})">Add to Cart</button>
             `;
 
@@ -70,7 +73,7 @@
 
         function addToCart(name, price) {
             alert(`${name} added to cart!`);
-            // Implement cart logic here
+            // Add to cart functionality can go here
         }
     </script>
 

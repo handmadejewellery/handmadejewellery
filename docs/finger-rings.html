@@ -46,8 +46,8 @@
             { name: "Ring-R01", price: 30, image: "R01.jpg" },
             { name: "Ring-R02", price: 30, image: "R02.jpg" },
             { name: "Ring-R03", price: 30, image: "R03.jpg" },
-            { name: "Ring-R04", price: 50, image: "R04.jpg" }
-            
+            { name: "Ring-R04", price: 50, image: "R04.jpg" },
+            { name: "Ring-R05", price: 45, image: "R05.jpg", description: "Customization available: choose your preferred color and size." }
         ];
 
         function generateProducts() {
@@ -60,6 +60,7 @@
                         <img src="${ring.image}" alt="${ring.name}">
                         <h3>${ring.name}</h3>
                         <p>Price: ₹${ring.price}</p>
+                        ${ring.description ? `<p>${ring.description}</p>` : ""}
                         <button onclick="addToCart('${ring.name}', ${ring.price})">Add to Cart</button>
                     </div>
                 `;
@@ -67,10 +68,16 @@
             });
         }
 
+        // Dummy addToCart function
+        function addToCart(name, price) {
+            alert(`${name} added to cart for ₹${price}`);
+        }
+
         generateProducts();
     </script>
 
     <script src="cart.js"></script>
+
     <footer>
         <p>&copy; 2025 Handmade Jewellery. All rights reserved.</p>
     </footer>
